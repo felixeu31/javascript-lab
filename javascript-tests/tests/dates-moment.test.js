@@ -50,4 +50,19 @@ describe('Moment dates', () => {
         expect(displayDate).toBe('11/03/2022');
     });
 
+    
+    it('display format in L formar', () => {
+        let momentDate = moment('1992-02-02T00:00:00Z');
+        let displayDate = momentDate.utc().format('L');
+        
+        expect(displayDate).toBe('02/02/1992');
+    });
+
+    it('display format in L formar', () => {
+        let momentDate = moment.utc('1992-02-02T00:00:00Z');
+        let displayDate = momentDate.format('L');
+        
+        expect(displayDate).toBe('02/02/1992');
+    });
+
 });
